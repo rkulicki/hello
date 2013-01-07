@@ -1,3 +1,5 @@
+// Example program for learning purposes.
+
 #include "helloworld.h"
 #include <gtkmm/application.h>
 
