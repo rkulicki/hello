@@ -3,7 +3,7 @@
 
 int main (int argc, char *argv[])
 {
-	Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "helloworld");
+	Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "ca.kulicki.helloworld");
 
 	Helloworld helloworld;
 
