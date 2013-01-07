@@ -1,0 +1,12 @@
+----------------------------------------------------------------------------
+                              hello
+----------------------------------------------------------------------------
+
+hello is a program for me (Robbin Kulicki) to learn how to 
+* create an Autotools based project
+* add a project to git source control
+* host a project oh GitHub
+* create a Debian package
+* integrate a program into the Linux desktop (add a menu item)
+* add language translations to a program
+
