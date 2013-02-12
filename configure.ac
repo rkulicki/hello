@@ -26,5 +26,40 @@ PKG_CHECK_MODULES([DEPS], [gtkmm-3.0])
 
 # Checks for library functions.
 
-AC_CONFIG_FILES([Makefile])
+dnl ************************************************************************
+dnl Enable extra debugging options
+dnl ************************************************************************
+AC_ARG_ENABLE(debug,
+	      AC_HELP_STRING([--enable-debug],
+	      [enable verbose debugging. [default=no]]),
+	      [enable_debug="yes"],[enable_debug="no"])
+
+if test "x$enable_debug" = "xyes"; then [
+   test "$cflags_set" = set || CFLAGS="$CFLAGS -g -O0"
+   HELLO_DEBUG_CFLAGS="-DHELLO_ENABLE_DEBUG"
+   ]
+else
+   HELLO_DEBUG_CFLAGS="-DG_DISABLE_ASSERT -DG_DISABLE_CHECKS -DG_DISABLE_CAST_CHECKS"
+fi
+AC_SUBST(HELLO_DEBUG_CFLAGS)
+
+AC_CONFIG_FILES([
+Makefile
+icons/Makefile
+icons/16/Makefile
+icons/22/Makefile
+icons/32/Makefile
+icons/48/Makefile
+icons/256/Makefile
+icons/scalable/Makefile
+])
 AC_OUTPUT
+
+echo "
+Build Configuration:
+  Debug........................$enable_debug
+
+Installation:
+  Prefix.......................$prefix
+"
+

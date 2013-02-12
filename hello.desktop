@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Hello
+Name[fr]=Bonjour
+Comment=Developer's test program
+Comment[fr]=Programme de test du développeur
+GenericName=Test program
+GenericName[fr]=Programme de Test
+X-GNOME-FullName=Hello - Learn How to Create a GUI Program
+X-GNOME-FullName[fr]=Bonjour - Apprenez à créer un programme GUI
+Exec=hello
+Terminal=false
+Type=Application
+Icon=hello
+Categories=MATE;GNOME;GTK;Development;
+
